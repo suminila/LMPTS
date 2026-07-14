@@ -1,0 +1,27 @@
+2026-07-09 20:04:19 - INFO - Migration log: migrations_logs\renumber_learner_ids_20260709_200419.log
+2026-07-09 20:04:19 - INFO - ======================================================================
+2026-07-09 20:04:19 - INFO - Learner ID Renumbering Migration
+2026-07-09 20:04:19 - INFO - ======================================================================
+2026-07-09 20:04:19 - INFO - Database: lmpts.db
+2026-07-09 20:04:19 - INFO - Dry-run: True
+2026-07-09 20:04:20 - INFO - Database backed up to: lmpts_backup_20260709_200419.db
+2026-07-09 20:04:20 - INFO - Discovering schema...
+2026-07-09 20:04:20 - INFO -   Learner ID column: learner_id
+2026-07-09 20:04:20 - INFO -   Registration order column: date_registered
+2026-07-09 20:04:20 - INFO -   Tables with learner_id: ['learners', 'enrollments']
+2026-07-09 20:04:20 - INFO - Checking if migration is needed...
+2026-07-09 20:04:20 - INFO -   Migration needed: IDs are not in clean sequential order
+2026-07-09 20:04:20 - INFO - Building learner ID mapping...
+2026-07-09 20:04:20 - INFO - Built mapping for 22 learners
+2026-07-09 20:04:20 - INFO - ======================================================================
+2026-07-09 20:04:20 - INFO - DRY-RUN MODE: The following changes would be applied:
+2026-07-09 20:04:20 - INFO - ======================================================================
+2026-07-09 20:04:20 - INFO - Starting migration transaction...
+2026-07-09 20:04:20 - DEBUG - Foreign key constraints deferred until transaction end
+2026-07-09 20:04:20 - INFO - Updating table 'enrollments' column 'learner_id'...
+2026-07-09 20:04:20 - INFO - Updating 'learners' table column 'learner_id'...
+2026-07-09 20:04:20 - INFO - [DRY-RUN] Rolling back transaction without applying changes
+2026-07-09 20:04:20 - INFO - ID mapping log: migrations_logs\learner_id_mapping_20260709_200420.txt
+2026-07-09 20:04:20 - INFO - ======================================================================
+2026-07-09 20:04:20 - INFO - DRY-RUN completed (no changes were applied)
+2026-07-09 20:04:20 - INFO - ======================================================================

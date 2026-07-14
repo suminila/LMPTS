@@ -1,0 +1,14 @@
+2026-07-09 20:10:47 - INFO - Migration log: migrations_logs\renumber_learner_ids_20260709_201047.log
+2026-07-09 20:10:47 - INFO - ======================================================================
+2026-07-09 20:10:47 - INFO - Learner ID Renumbering Migration
+2026-07-09 20:10:47 - INFO - ======================================================================
+2026-07-09 20:10:47 - INFO - Database: lmpts.db
+2026-07-09 20:10:47 - INFO - Dry-run: False
+2026-07-09 20:10:47 - INFO - Database backed up to: lmpts_backup_20260709_201047.db
+2026-07-09 20:10:47 - INFO - Discovering schema...
+2026-07-09 20:10:47 - INFO -   Learner ID column: learner_id
+2026-07-09 20:10:47 - INFO -   Registration order column: date_registered
+2026-07-09 20:10:47 - INFO -   Tables with learner_id: ['learners', 'enrollments']
+2026-07-09 20:10:47 - INFO - Checking if migration is needed...
+2026-07-09 20:10:47 - INFO - OK: Database is already in clean sequential order. No changes needed.
+2026-07-09 20:10:47 - INFO - (Idempotency check passed; this script is a no-op)

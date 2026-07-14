@@ -1,0 +1,143 @@
+2026-07-09 20:09:43 - INFO - Migration log: migrations_logs\renumber_learner_ids_20260709_200943.log
+2026-07-09 20:09:43 - INFO - ======================================================================
+2026-07-09 20:09:43 - INFO - Learner ID Renumbering Migration
+2026-07-09 20:09:43 - INFO - ======================================================================
+2026-07-09 20:09:43 - INFO - Database: lmpts.db
+2026-07-09 20:09:43 - INFO - Dry-run: False
+2026-07-09 20:09:43 - INFO - Database backed up to: lmpts_backup_20260709_200943.db
+2026-07-09 20:09:43 - INFO - Discovering schema...
+2026-07-09 20:09:43 - INFO -   Learner ID column: learner_id
+2026-07-09 20:09:43 - INFO -   Registration order column: date_registered
+2026-07-09 20:09:43 - INFO -   Tables with learner_id: ['learners', 'enrollments']
+2026-07-09 20:09:43 - INFO - Checking if migration is needed...
+2026-07-09 20:09:43 - INFO -   Migration needed: IDs are not in clean sequential order
+2026-07-09 20:09:43 - INFO - Building learner ID mapping...
+2026-07-09 20:09:43 - DEBUG -   L015 (registered: 2000-01-01 00:00:00) -> L001
+2026-07-09 20:09:43 - DEBUG -   L013 (registered: 2000-01-01 00:00:01) -> L002
+2026-07-09 20:09:43 - DEBUG -   L011 (registered: 2000-01-01 00:00:02) -> L003
+2026-07-09 20:09:43 - DEBUG -   L004 (registered: 2000-01-01 00:00:03) -> L004
+2026-07-09 20:09:43 - DEBUG -   L009 (registered: 2000-01-01 00:00:04) -> L005
+2026-07-09 20:09:43 - DEBUG -   L022 (registered: 2000-01-01 00:00:05) -> L006
+2026-07-09 20:09:43 - DEBUG -   L021 (registered: 2000-01-01 00:00:06) -> L007
+2026-07-09 20:09:43 - DEBUG -   L007 (registered: 2000-01-01 00:00:07) -> L008
+2026-07-09 20:09:43 - DEBUG -   L014 (registered: 2000-01-01 00:00:08) -> L009
+2026-07-09 20:09:43 - DEBUG -   L001 (registered: 2000-01-01 00:00:09) -> L010
+2026-07-09 20:09:43 - DEBUG -   L020 (registered: 2000-01-01 00:00:10) -> L011
+2026-07-09 20:09:43 - DEBUG -   L017 (registered: 2000-01-01 00:00:11) -> L012
+2026-07-09 20:09:43 - DEBUG -   L018 (registered: 2000-01-01 00:00:12) -> L013
+2026-07-09 20:09:43 - DEBUG -   L006 (registered: 2000-01-01 00:00:13) -> L014
+2026-07-09 20:09:43 - DEBUG -   L010 (registered: 2000-01-01 00:00:14) -> L015
+2026-07-09 20:09:43 - DEBUG -   L019 (registered: 2000-01-01 00:00:15) -> L016
+2026-07-09 20:09:43 - DEBUG -   L012 (registered: 2000-01-01 00:00:16) -> L017
+2026-07-09 20:09:43 - DEBUG -   L002 (registered: 2000-01-01 00:00:17) -> L018
+2026-07-09 20:09:43 - DEBUG -   L016 (registered: 2000-01-01 00:00:18) -> L019
+2026-07-09 20:09:43 - DEBUG -   L005 (registered: 2000-01-01 00:00:19) -> L020
+2026-07-09 20:09:43 - DEBUG -   L008 (registered: 2000-01-01 00:00:20) -> L021
+2026-07-09 20:09:43 - DEBUG -   L003 (registered: 2000-01-01 00:00:21) -> L022
+2026-07-09 20:09:43 - INFO - Built mapping for 22 learners
+2026-07-09 20:09:43 - INFO - Starting migration transaction...
+2026-07-09 20:09:43 - DEBUG - Foreign key constraints deferred until transaction end
+2026-07-09 20:09:43 - INFO - PHASE 1: Updating child tables to temporary IDs...
+2026-07-09 20:09:43 - INFO -   enrollments: old_id -> temp_id
+2026-07-09 20:09:43 - DEBUG -     L002 -> _TEMP_0002: 2 row(s)
+2026-07-09 20:09:43 - DEBUG -     L003 -> _TEMP_0003: 3 row(s)
+2026-07-09 20:09:43 - DEBUG -     L004 -> _TEMP_0004: 1 row(s)
+2026-07-09 20:09:43 - DEBUG -     L005 -> _TEMP_0005: 2 row(s)
+2026-07-09 20:09:43 - DEBUG -     L006 -> _TEMP_0006: 1 row(s)
+2026-07-09 20:09:43 - DEBUG -     L008 -> _TEMP_0008: 8 row(s)
+2026-07-09 20:09:43 - DEBUG -     L009 -> _TEMP_0009: 2 row(s)
+2026-07-09 20:09:43 - DEBUG -     L010 -> _TEMP_0010: 1 row(s)
+2026-07-09 20:09:43 - DEBUG -     L011 -> _TEMP_0011: 9 row(s)
+2026-07-09 20:09:43 - DEBUG -     L012 -> _TEMP_0012: 1 row(s)
+2026-07-09 20:09:43 - DEBUG -     L013 -> _TEMP_0013: 5 row(s)
+2026-07-09 20:09:43 - DEBUG -     L014 -> _TEMP_0014: 2 row(s)
+2026-07-09 20:09:43 - DEBUG -     L015 -> _TEMP_0015: 9 row(s)
+2026-07-09 20:09:43 - DEBUG -     L016 -> _TEMP_0016: 1 row(s)
+2026-07-09 20:09:43 - DEBUG -     L017 -> _TEMP_0017: 2 row(s)
+2026-07-09 20:09:43 - DEBUG -     L018 -> _TEMP_0018: 2 row(s)
+2026-07-09 20:09:43 - DEBUG -     L019 -> _TEMP_0019: 3 row(s)
+2026-07-09 20:09:43 - DEBUG -     L020 -> _TEMP_0020: 3 row(s)
+2026-07-09 20:09:43 - DEBUG -     L021 -> _TEMP_0021: 2 row(s)
+2026-07-09 20:09:43 - DEBUG -     L022 -> _TEMP_0022: 2 row(s)
+2026-07-09 20:09:43 - INFO - PHASE 2a: Updating learners table to temporary IDs...
+2026-07-09 20:09:43 - DEBUG -   L001 -> _TEMP_0001: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L002 -> _TEMP_0002: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L003 -> _TEMP_0003: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L004 -> _TEMP_0004: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L005 -> _TEMP_0005: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L006 -> _TEMP_0006: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L007 -> _TEMP_0007: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L008 -> _TEMP_0008: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L009 -> _TEMP_0009: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L010 -> _TEMP_0010: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L011 -> _TEMP_0011: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L012 -> _TEMP_0012: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L013 -> _TEMP_0013: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L014 -> _TEMP_0014: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L015 -> _TEMP_0015: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L016 -> _TEMP_0016: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L017 -> _TEMP_0017: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L018 -> _TEMP_0018: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L019 -> _TEMP_0019: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L020 -> _TEMP_0020: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L021 -> _TEMP_0021: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   L022 -> _TEMP_0022: 1 learner(s)
+2026-07-09 20:09:43 - INFO - PHASE 2b: Updating learners table from temporary to final IDs...
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0001 -> L010: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0002 -> L018: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0003 -> L022: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0004 -> L004: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0005 -> L020: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0006 -> L014: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0007 -> L008: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0008 -> L021: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0009 -> L005: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0010 -> L015: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0011 -> L003: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0012 -> L017: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0013 -> L002: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0014 -> L009: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0015 -> L001: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0016 -> L019: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0017 -> L012: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0018 -> L013: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0019 -> L016: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0020 -> L011: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0021 -> L007: 1 learner(s)
+2026-07-09 20:09:43 - DEBUG -   _TEMP_0022 -> L006: 1 learner(s)
+2026-07-09 20:09:43 - INFO - PHASE 3: Updating child tables from temp to final IDs...
+2026-07-09 20:09:43 - INFO -   enrollments: temp_id -> new_id
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0002 -> L018: 2 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0003 -> L022: 3 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0004 -> L004: 1 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0005 -> L020: 2 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0006 -> L014: 1 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0008 -> L021: 8 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0009 -> L005: 2 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0010 -> L015: 1 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0011 -> L003: 9 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0012 -> L017: 1 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0013 -> L002: 5 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0014 -> L009: 2 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0015 -> L001: 9 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0016 -> L019: 1 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0017 -> L012: 2 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0018 -> L013: 2 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0019 -> L016: 3 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0020 -> L011: 3 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0021 -> L007: 2 row(s)
+2026-07-09 20:09:43 - DEBUG -     _TEMP_0022 -> L006: 2 row(s)
+2026-07-09 20:09:43 - INFO - Migration transaction committed successfully
+2026-07-09 20:09:43 - INFO - Verifying migration...
+2026-07-09 20:09:43 - INFO - Verifying learners table...
+2026-07-09 20:09:43 - INFO -   OK: All 22 learner IDs are sequential and correct
+2026-07-09 20:09:43 - INFO - Verifying foreign key references...
+2026-07-09 20:09:43 - INFO -   OK: enrollments: all 20 unique references are valid
+2026-07-09 20:09:43 - INFO - OK: Migration verified successfully
+2026-07-09 20:09:43 - INFO - ID mapping log: migrations_logs\learner_id_mapping_20260709_200943.txt
+2026-07-09 20:09:43 - INFO - ======================================================================
+2026-07-09 20:09:43 - INFO - OK: Migration completed successfully!
+2026-07-09 20:09:43 - INFO -   Learners migrated: 22
+2026-07-09 20:09:43 - INFO -   Backup: lmpts_backup_20260709_200943.db
+2026-07-09 20:09:43 - INFO -   Mapping log: migrations_logs\learner_id_mapping_20260709_200943.txt
+2026-07-09 20:09:43 - INFO - ======================================================================

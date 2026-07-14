@@ -1,0 +1,93 @@
+2026-07-09 20:06:58 - INFO - Migration log: migrations_logs\renumber_learner_ids_20260709_200658.log
+2026-07-09 20:06:58 - INFO - ======================================================================
+2026-07-09 20:06:58 - INFO - Learner ID Renumbering Migration
+2026-07-09 20:06:58 - INFO - ======================================================================
+2026-07-09 20:06:58 - INFO - Database: lmpts.db
+2026-07-09 20:06:58 - INFO - Dry-run: True
+2026-07-09 20:06:58 - INFO - Database backed up to: lmpts_backup_20260709_200658.db
+2026-07-09 20:06:58 - INFO - Discovering schema...
+2026-07-09 20:06:58 - INFO -   Learner ID column: learner_id
+2026-07-09 20:06:58 - INFO -   Registration order column: date_registered
+2026-07-09 20:06:58 - INFO -   Tables with learner_id: ['learners', 'enrollments']
+2026-07-09 20:06:58 - INFO - Checking if migration is needed...
+2026-07-09 20:06:58 - INFO -   Migration needed: IDs are not in clean sequential order
+2026-07-09 20:06:58 - INFO - Building learner ID mapping...
+2026-07-09 20:06:58 - DEBUG -   L015 (registered: 2000-01-01 00:00:00) -> L001
+2026-07-09 20:06:58 - DEBUG -   L013 (registered: 2000-01-01 00:00:01) -> L002
+2026-07-09 20:06:58 - DEBUG -   L011 (registered: 2000-01-01 00:00:02) -> L003
+2026-07-09 20:06:58 - DEBUG -   L004 (registered: 2000-01-01 00:00:03) -> L004
+2026-07-09 20:06:58 - DEBUG -   L009 (registered: 2000-01-01 00:00:04) -> L005
+2026-07-09 20:06:58 - DEBUG -   L022 (registered: 2000-01-01 00:00:05) -> L006
+2026-07-09 20:06:58 - DEBUG -   L021 (registered: 2000-01-01 00:00:06) -> L007
+2026-07-09 20:06:58 - DEBUG -   L007 (registered: 2000-01-01 00:00:07) -> L008
+2026-07-09 20:06:58 - DEBUG -   L014 (registered: 2000-01-01 00:00:08) -> L009
+2026-07-09 20:06:58 - DEBUG -   L001 (registered: 2000-01-01 00:00:09) -> L010
+2026-07-09 20:06:58 - DEBUG -   L020 (registered: 2000-01-01 00:00:10) -> L011
+2026-07-09 20:06:58 - DEBUG -   L017 (registered: 2000-01-01 00:00:11) -> L012
+2026-07-09 20:06:58 - DEBUG -   L018 (registered: 2000-01-01 00:00:12) -> L013
+2026-07-09 20:06:58 - DEBUG -   L006 (registered: 2000-01-01 00:00:13) -> L014
+2026-07-09 20:06:58 - DEBUG -   L010 (registered: 2000-01-01 00:00:14) -> L015
+2026-07-09 20:06:58 - DEBUG -   L019 (registered: 2000-01-01 00:00:15) -> L016
+2026-07-09 20:06:58 - DEBUG -   L012 (registered: 2000-01-01 00:00:16) -> L017
+2026-07-09 20:06:58 - DEBUG -   L002 (registered: 2000-01-01 00:00:17) -> L018
+2026-07-09 20:06:58 - DEBUG -   L016 (registered: 2000-01-01 00:00:18) -> L019
+2026-07-09 20:06:58 - DEBUG -   L005 (registered: 2000-01-01 00:00:19) -> L020
+2026-07-09 20:06:58 - DEBUG -   L008 (registered: 2000-01-01 00:00:20) -> L021
+2026-07-09 20:06:58 - DEBUG -   L003 (registered: 2000-01-01 00:00:21) -> L022
+2026-07-09 20:06:58 - INFO - Built mapping for 22 learners
+2026-07-09 20:06:58 - INFO - ======================================================================
+2026-07-09 20:06:58 - INFO - DRY-RUN MODE: The following changes would be applied:
+2026-07-09 20:06:58 - INFO - ======================================================================
+2026-07-09 20:06:58 - INFO - Starting migration transaction...
+2026-07-09 20:06:58 - DEBUG - Foreign key constraints deferred until transaction end
+2026-07-09 20:06:58 - INFO - Updating table 'enrollments' column 'learner_id'...
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L015 -> L001
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L013 -> L002
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L011 -> L003
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L004 -> L004
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L009 -> L005
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L022 -> L006
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L021 -> L007
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L007 -> L008
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L014 -> L009
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L001 -> L010
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L020 -> L011
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L017 -> L012
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L018 -> L013
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L006 -> L014
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L010 -> L015
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L019 -> L016
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L012 -> L017
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L002 -> L018
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L016 -> L019
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L005 -> L020
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L008 -> L021
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update enrollments.learner_id: L003 -> L022
+2026-07-09 20:06:58 - INFO - Updating 'learners' table column 'learner_id'...
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L015 -> L001
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L013 -> L002
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L011 -> L003
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L004 -> L004
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L009 -> L005
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L022 -> L006
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L021 -> L007
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L007 -> L008
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L014 -> L009
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L001 -> L010
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L020 -> L011
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L017 -> L012
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L018 -> L013
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L006 -> L014
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L010 -> L015
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L019 -> L016
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L012 -> L017
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L002 -> L018
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L016 -> L019
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L005 -> L020
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L008 -> L021
+2026-07-09 20:06:58 - INFO -   [DRY-RUN] Would update learners.learner_id: L003 -> L022
+2026-07-09 20:06:58 - INFO - [DRY-RUN] Rolling back transaction without applying changes
+2026-07-09 20:06:58 - INFO - ID mapping log: migrations_logs\learner_id_mapping_20260709_200658.txt
+2026-07-09 20:06:58 - INFO - ======================================================================
+2026-07-09 20:06:58 - INFO - DRY-RUN completed (no changes were applied)
+2026-07-09 20:06:58 - INFO - ======================================================================
